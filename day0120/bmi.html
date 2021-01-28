@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8"/>
+<title>jaレッスン</title>
+</head>
+<body>
+	<h1>体重と慎重を入力してください</h1>
+	<input type="number" id="height"><br>
+	<input type="number" id="weight"><br>
+	<button onclick="calc()">計算</button>
+	<div id="result"></div>
+<script>
+	const height=document.getElementById('height'};
+	const Weight=document.getElementById('weight'};
+	const result=document.getElementById('result'};
+	const calc=()=>{
+			let n=parseFloat(weight.value)/((parseFloat(heigth.value)/100)*(parseFloat(height.value)/100));
+			let str=`あなたのbmiは${n.toFixed(1)}です！`;
+			result.textContent=str;
+	};
+</script>
+</body>
+</html>
+

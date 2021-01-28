@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charet="utf-8">
+		<title>jsLesson</title>
+	</head>
+<body>
+	<button id="btn">追加</button>
+	<ol id="list"></ol>
+<script>
+	const ol=document.getElementById('list');
+	const btn=document.getElementById('btn');
+	let count=0;
+	btn.addEventListener('click',()=>{
+			const li=document.createElement('li');
+			li.textContent='Item'+(++count);
+			//class名を追加する
+			//li.className='hoge fuga';
+			//olに子要素(Child)として追加(append)する
+			ol.appendChild(li);
+	});
+</script>
+	</body>
+</html>
+

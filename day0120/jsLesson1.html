@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>jsレッスン</title>
+	</head>
+	<body>
+		<div id="result"></div>
+		<p>hello</p>
+		<p>world</p>
+<script>
+	//letはブロックスコープ
+	let x=10;
+	let y=20;
+	let z=x+y;
+	let str="x+y="+z;
+	console.log(str);
+	let a=1.0;
+	//ダブルコーテーションでもシングルコーテーションでも大丈夫
+	a="Hello";
+	console.log(a);
+	//昔はletがなかったのでvarで書かれていることが多い
+	//ファンクションスコープで範囲が広く干渉しやすく使いにくいことがある
+	var b=2.0;
+	console.log(b);
+	//windowとdocumentは暗黙オブジェクト
+	console.log(window);
+	console.log(document);
+	//constは定数のこと(finalと一緒)
+	//getElementById("")で指定したidの要素を取得してくる
+	//getElementsByClass("")でクラス要素取得 複数要素なのでElements
+	const ele=document.getElementById("result");
+	console.log(ele);
+	ele.textContent=str;
+	console.log(ele);
+	console.dir(ele);
+	//window.alert("Hello JS!");
+	let ans=window.confirm("JSはたのしいですか");
+	console.log(ans);
+	//ans=window.prompt("好きな言葉は");
+	ans=prompt("好きな言葉は");
+	ele.textContent=ans;
+	//JSの配列宣言時の要素は[]で記入
+	let arr=[22,10,44];
+	console.log(arr[0]);
+	for(let i=0;i<arr.length;i++){
+		console.log(arr[i]);
+	}
+	//拡張for文
+	for(let n of arr){
+		console.log(n);
+	}
+	let pelements=document.getElementsByTagName("p");
+	for(let i=0;i<pelements.length;i++){
+		console.log(pelements[i]);
+		//console.log(pelements[i].textContent);
+	}
+	let mixArr=["aa",2,3,4];
+	for(let val of mixArr){
+		console.log(val);
+	}
+	//オブジェクトは{}で記述する
+	const obj1={"name":"John","age":22};
+	console.log(obj1);
+	console.log(obj1.name);
+	console.log(obj1.age);
+	obj1.gender="man"
+	console.log(obj1);
+	//function()はメソッドを書くときに使用
+	//型の指定はない
+	let func1=function(){console.log("ドーナツ");};
+	func1();
+	let func2=function(arg){console.log(arg*2)};
+	func2(5);
+
+	function maxOf(x,y){
+		return x > y ? x:y;
+	}
+	console.log(maxOf(10,30));
+	console.log(maxOf("hah","lol"));
+	let func3=maxOf;
+	ans=func3(100,200);
+	console.log(ans);
+
+	//Lambda式(ラムダ式)
+	const func4=()=>{console.log("double-arrow");};
+	func4();
+
+	const func5=(x,y)=>{console.log(x+y);};
+	func5(10,50);
+	//引数が１つなら()を省略できる
+	const func6=x=>{console.log(x*2);};
+	func6(10);
+	//処理が１つなら{}も省略できる
+	const func7=x=>console.log(x*3);
+	func7();
+
+</script>
+	</body>
+</html>
+

@@ -1,0 +1,84 @@
+#container{
+	width:800px;
+	height:600px;
+	margin:0 auto;
+	background:#666;
+}
+#mTitle{
+	width:100%;
+	height:100px;
+	margin:0 auto;
+	font-size:60px;
+	line-height:100px;
+	text-align:center;
+	background:#333;
+}
+#explan{
+	width:100%;
+	height:80px;
+	margin:0 auto;
+	font-size:10px;
+	line-height:80px;
+	text-align:center;
+	background:#444;
+}
+#main{
+	width:100%;
+	height:300px;
+	background:#444;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	background:#333;
+}
+#tarotTable{
+	width:100%;
+	/*height:200px;*/
+	padding:10px 0;
+	display:flex;
+	justify-content:space-around;
+	align-items:center;
+	background:#444;
+}
+#shuf{
+	display:block;
+	width:150px;
+	height:40px;
+	font-size:15px;
+	border-radius:5px;
+}
+
+.tarot{
+	width:80px;
+	height:120px;
+	margin:0px;
+	background-size:cover;
+	background-position:center;
+	border:1px solid #000;
+	border-radius:5%;
+	padding:0;
+	position:absolute;
+}
+.tarotLine{
+	width:960px;
+	height:130px;
+	margin:0 auto;
+	position:relative;
+}
+.tarot1{
+	width:200px;
+	height:280px;
+	background-size:cover;
+	background-position:center;
+	margin:0px;
+}
+.back{
+	background-image: url(../images/tb.png)!important;
+}
+#result{
+	width:960px;
+	height:130px;
+}
+#result p{
+
+}
